@@ -12,9 +12,7 @@ import UIKit
 class PhotoListController: UITableViewController  {
     
     @IBOutlet var PhototableView: UITableView!
-    
-    
-    
+
     var presenter: PhotoListPresenter?
     var searchQuery: String?
     
@@ -24,6 +22,7 @@ class PhotoListController: UITableViewController  {
         super.viewDidLoad()
         
         self.responseArray = presenter?.photoResultsArray ?? []
+        //presenter.getSelectedPhoto()
     }
     
 
@@ -46,6 +45,9 @@ class PhotoListController: UITableViewController  {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // Add function to trigger segue to photo detail controller
     }
     
     
@@ -56,18 +58,21 @@ class PhotoListController: UITableViewController  {
     }
     
     func loadPhotoItems(){
-        UIApplication.shared.beginIgnoringInteractionEvents()
+        
         
         //let responseModel = SearchPresenter.getSearchResults()
     }
     
-//    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//           super.prepare(for: segue, sender: sender)
-//           if segue.identifier == "SearchToList" {
-//               let submitTabVC = segue.destination as! InspectionReportViewController
-//               submitTabVC.inspectionId = self.inspection.id
-//           }
-//       }
+    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           super.prepare(for: segue, sender: sender)
+           if segue.identifier == "ListToDetail" {
+               let photoDetailsPage = segue.destination as! PhotosDetailsController
+            let indexPath = self.tableView.indexPathForSelectedRow!
+            let index = indexPath.row
+            let photoDetailsPresenter = PhotoDetailsPresenter() //Verify type for selected photo here
+            photoDetailsPage.presenter = photoDetailsPresenter
+           }
+       }
    
 }
 

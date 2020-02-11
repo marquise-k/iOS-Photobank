@@ -12,7 +12,7 @@ class PhotoBankController {
     
     //Initialising API call results for the presenters
     var PhotoListResult: [PhotoModel] = [] //Array of photoModels
-    var PhotoDetails: PhotoModel = PhotoModel() // PhotoModel
+    var PhotoDetails: PhotoModel = PhotoModel(username: "", likes: 0, location: "", thumbnail: "", profileImage: "") // PhotoModel
     var HighDefImageUrl: String = "" //String representing image url
     
 

@@ -7,3 +7,22 @@
 //
 
 import Foundation
+
+class PhotoDetailsPresenter {
+    
+    var photoSelected: PhotoModel?
+    
+//    init(with photoSelected: PhotoModel) {
+//        self.photoSelected = photoSelected
+//    }
+    
+    init(){
+        photoSelected = PhotoModel(username: "Marco", likes: 32, location: "Toronto, ON", thumbnail: "", profileImage: "")
+    }
+    
+    func loadPhotoDetails() -> PhotoModel? {
+        // Returns photo details
+        guard let result = photoSelected else {return nil}
+        return nil
+    }
+}

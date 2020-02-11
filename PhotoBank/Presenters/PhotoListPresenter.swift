@@ -20,9 +20,10 @@ class PhotoListPresenter {
         self.photoResultsArray = photoResultsArray
     
     }
-    
-    func loadPhotoItems(){
-        var photoItem = PhotoModel()
-    }
+//    
+//    func loadPhotoItems(){
+//        APICallManager.fetchPhotoObjects()_
+//    }
 
 }
+

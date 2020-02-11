@@ -16,18 +16,7 @@ struct PhotoModel {
     let thumbnail: String
     let profileImage: String
     
-    
-     init(){
-        self.username = ""
-        self.likes = 0
-        self.location = ""
-        self.thumbnail = ""
-        self.profileImage = ""
-        
-        
-    }
-    
-    init(with username: String,
+    init(username: String,
      likes: Double,
      location: String,
      thumbnail: String,

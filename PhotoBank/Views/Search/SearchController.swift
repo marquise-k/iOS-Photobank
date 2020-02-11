@@ -23,7 +23,6 @@ class SearchController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         SearchTextField.delegate = self as? UISearchBarDelegate
-        presenter.getSearchResults()
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,13 +34,9 @@ extension SearchController: UITextFieldDelegate {
     
     @IBAction func searchPressed(_ sender: UIButton) {
         SearchTextField.endEditing(true)
-        
         searchInput = SearchTextField.text ?? "Scenery"
-        
-        search(for:  "")
-        //Call presenter to get data in completion handler and then perform segue
+        search(for: searchInput)
     }
-    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         SearchTextField.endEditing(true)
@@ -57,17 +52,12 @@ extension SearchController: UITextFieldDelegate {
         }
     }
     
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if let input = SearchTextField.text {
-            //searchInput = APICallManager.fetchPhotoObjects(keyword: input)
-        }
-        
-        
-    }
-    
+   
     func search(for text: String) {
         // call presenter and search for input text
         //if search is success, then preform segue
+        
+        presenter.getSearchResults(query: searchInput)
         self.performSegue(withIdentifier: "SearchToList", sender: self)
         //if not, show error
         

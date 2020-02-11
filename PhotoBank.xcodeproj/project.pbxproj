@@ -18,12 +18,13 @@
 		F31703B623F0872D009DDB36 /* PhotoListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31703B523F0872D009DDB36 /* PhotoListPresenter.swift */; };
 		F31703B923F08EB2009DDB36 /* PhotosDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31703B823F08EB2009DDB36 /* PhotosDetailsController.swift */; };
 		F31703BE23F09EEB009DDB36 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31703BD23F09EEB009DDB36 /* EndPoints.swift */; };
-		F31703C023F09FC9009DDB36 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31703BF23F09FC9009DDB36 /* BaseService.swift */; };
+		F31703C023F09FC9009DDB36 /* APICallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31703BF23F09FC9009DDB36 /* APICallManager.swift */; };
 		F31703C223F0E4B3009DDB36 /* UnsplashData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31703C123F0E4B3009DDB36 /* UnsplashData.swift */; };
 		F31703C523F10126009DDB36 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31703C323F0F542009DDB36 /* PhotoModel.swift */; };
 		F31703C723F10CEF009DDB36 /* PhotoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31703C623F10CEF009DDB36 /* PhotoItemCell.swift */; };
 		F31703C923F1BBBE009DDB36 /* PhotosDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31703C823F1BBBE009DDB36 /* PhotosDetailsPresenter.swift */; };
 		F31703CB23F1BBF1009DDB36 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31703CA23F1BBF1009DDB36 /* SearchPresenter.swift */; };
+		F31703D123F2CA6E009DDB36 /* PhotoItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31703D023F2CA6E009DDB36 /* PhotoItemPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +41,13 @@
 		F31703B523F0872D009DDB36 /* PhotoListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListPresenter.swift; sourceTree = "<group>"; };
 		F31703B823F08EB2009DDB36 /* PhotosDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDetailsController.swift; sourceTree = "<group>"; };
 		F31703BD23F09EEB009DDB36 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
-		F31703BF23F09FC9009DDB36 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		F31703BF23F09FC9009DDB36 /* APICallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallManager.swift; sourceTree = "<group>"; };
 		F31703C123F0E4B3009DDB36 /* UnsplashData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashData.swift; sourceTree = "<group>"; };
 		F31703C323F0F542009DDB36 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		F31703C623F10CEF009DDB36 /* PhotoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCell.swift; sourceTree = "<group>"; };
 		F31703C823F1BBBE009DDB36 /* PhotosDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosDetailsPresenter.swift; sourceTree = "<group>"; };
 		F31703CA23F1BBF1009DDB36 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		F31703D023F2CA6E009DDB36 /* PhotoItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				F31703B523F0872D009DDB36 /* PhotoListPresenter.swift */,
 				F31703C823F1BBBE009DDB36 /* PhotosDetailsPresenter.swift */,
 				F31703CA23F1BBF1009DDB36 /* SearchPresenter.swift */,
+				F31703D023F2CA6E009DDB36 /* PhotoItemPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -151,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				F31703BD23F09EEB009DDB36 /* EndPoints.swift */,
-				F31703BF23F09FC9009DDB36 /* BaseService.swift */,
+				F31703BF23F09FC9009DDB36 /* APICallManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -242,11 +245,12 @@
 				F31703AC23F08451009DDB36 /* SearchController.swift in Sources */,
 				F317039323F07B86009DDB36 /* AppDelegate.swift in Sources */,
 				F31703CB23F1BBF1009DDB36 /* SearchPresenter.swift in Sources */,
+				F31703D123F2CA6E009DDB36 /* PhotoItemPresenter.swift in Sources */,
 				F31703B623F0872D009DDB36 /* PhotoListPresenter.swift in Sources */,
 				F31703B223F086D4009DDB36 /* PhotoListController.swift in Sources */,
 				F31703BE23F09EEB009DDB36 /* EndPoints.swift in Sources */,
 				F317039523F07B86009DDB36 /* SceneDelegate.swift in Sources */,
-				F31703C023F09FC9009DDB36 /* BaseService.swift in Sources */,
+				F31703C023F09FC9009DDB36 /* APICallManager.swift in Sources */,
 				F31703C223F0E4B3009DDB36 /* UnsplashData.swift in Sources */,
 				F31703C923F1BBBE009DDB36 /* PhotosDetailsPresenter.swift in Sources */,
 			);

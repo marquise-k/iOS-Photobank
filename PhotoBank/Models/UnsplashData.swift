@@ -9,8 +9,7 @@
 import Foundation
 
 struct UnsplashData: Codable {
-    let username: String
-    let results: [Results]
+    let results: [Results]?
 }
 
 struct Results: Codable{
@@ -34,3 +33,4 @@ struct User: Codable{
 struct ProfileImage: Codable{
     let small: String
 }
+
